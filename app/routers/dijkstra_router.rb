@@ -22,8 +22,8 @@ class DijkstraRouter < Router
     # delete parent from @@available_routes
     delete_route(route)
 
-    # merge the childrens
-    # ex: (A-B) search all children of B and return (a-B-c and a-B-c)
+    # merge the children
+    # ex: (A-B) search all children of B and return (a-B-c and a-B-d)
     load_routes(route.destiny, route)
 
     #recursivity if is not on destiny
